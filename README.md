@@ -23,26 +23,26 @@ Before running this project, ensure that you have the following installed:
 
 ## Installation
 1. Clone the repository to your local machine:
-   
-   git clone https://github.com/yourusername/real-time-speech-transcription.git
+   ```bash
+   git clone https://github.com/varadganjoo/real-time-speech-transcription.git
    cd real-time-speech-transcription
-
+   ```
 2. Install the required Python libraries:
-   
+   ```
    pip install -r requirements.txt
-
+   ```
 3. Set up the Groq API key:
    - Obtain your API key from the Groq platform.
    - Set the `GROQ_API_KEY` environment variable:
 
    For Windows:
-   
+   ```
    set GROQ_API_KEY=your_api_key_here
-
+   ```
    For MacOS/Linux:
-   
+   ```
    export GROQ_API_KEY=your_api_key_here
-
+   ```
 ## Usage
 To start the real-time transcription system, simply run the following command:
 
