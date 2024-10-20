@@ -46,7 +46,7 @@ Before running this project, ensure that you have the following installed:
 ## Usage
 To start the real-time transcription system, simply run the following command:
 
-   python main.py
+   ```python main.py```
 
 This will open a simple GUI window that displays real-time transcriptions as you speak.
 
