@@ -15,6 +15,9 @@ import collections
 import tkinter as tk
 import json
 
+# Groq retires models over time, so the grammar model can be overridden with an env var.
+GRAMMAR_MODEL = os.getenv("GROQ_GRAMMAR_MODEL", "llama-3.1-8b-instant")
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -265,7 +268,7 @@ def correct_transcription(refined_text, timestamp):
 
         completion = client.chat.completions.create(
             messages=messages,
-            model="llama3-8b-8192",
+            model=GRAMMAR_MODEL,
             temperature=0.0,
             max_tokens=1024
         )

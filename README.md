@@ -18,7 +18,7 @@ The application is built using Python, leveraging the following key technologies
 
 ## Requirements
 Before running this project, ensure that you have the following installed:
-- Python 3.7+
+- Python 3.9+
 - A Groq API key for accessing transcription and LLM services.
 
 ## Installation
@@ -56,7 +56,7 @@ This will open a simple GUI window that displays real-time transcriptions as you
 3. **Transcription**:
    - Uses the Groq API to transcribe audio segments using the `whisper-large-v3-turbo` model for quick, rough drafts.
    - Longer audio segments are transcribed with `whisper-large-v3` for more accurate, refined transcriptions.
-4. **Grammar Correction**: Once the refined transcription is complete, the project uses a Groq-compatible LLM (e.g., `llama3-8b-8192`) to correct any grammatical errors in the transcription.
+4. **Grammar Correction**: Once the refined transcription is complete, the project uses a Groq-compatible LLM (`llama-3.1-8b-instant` by default; set `GROQ_GRAMMAR_MODEL` to use another) to correct any grammatical errors in the transcription.
 5. **GUI Display**: The transcriptions are displayed in a Tkinter GUI window:
    - Rough drafts are shown in blue.
    - Once a corrected transcription is ready, it replaces the rough draft in black text.
